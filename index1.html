@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Adhésion – Association Culturelle et Sociale (ACS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* FOND GÉNÉRAL */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #79DBD0, #77D9AF);
+        }
+
+        /* CONTENEUR PRINCIPAL */
+        .container {
+            max-width: 680px;
+            background: #ffffff;
+            margin: 40px auto;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* BANDEAU */
+        .banner {
+            height: 250px;
+            background: linear-gradient(to right, #79DBD0, #77D9AF);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.95;
+        }
+
+        /* CONTENU */
+        .content {
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #1f3d3a;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #3b6f6a;
+            font-weight: normal;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #2f5f59;
+            border-bottom: 2px solid #e0f2ef;
+            padding-bottom: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #2f5f59;
+        }
+
+        input:not([type="checkbox"]),
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #79DBD0;
+            box-shadow: 0 0 0 2px rgba(121, 219, 208, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* CHECKBOX */
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: normal;
+            margin-top: 8px;
+            color: #333;
+        }
+
+        /* BOUTONS */
+        button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(to right, #79DBD0, #77D9AF);
+            color: #1f3d3a;
+            border: none;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* PAIEMENT */
+        .payment {
+            background: #f3fbfa;
+            padding: 20px;
+            margin-top: 35px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .payment h2 {
+            margin-top: 0;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px;
+            }
+            .banner {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BANDEAU -->
+    <div class="banner">
+        <img src="ACS-image.jpg" alt="Association Culturelle et Sociale">
+    </div>
+
+    <div class="content">
+
+        <h1>Fiche d’adhésion</h1>
+        <h2>Bénévole · Membre actif · Adhérent</h2>
+
+        <form>
+
+            <h3>Informations personnelles</h3>
+
+            <label>Nom</label>
+            <input type="text" required>
+
+            <label>Prénom</label>
+            <input type="text" required>
+
+            <label>Date de naissance</label>
+            <input type="date">
+
+            <label>Adresse</label>
+            <textarea></textarea>
+
+            <label>Téléphone</label>
+            <input type="tel">
+
+            <label>Email</label>
+            <input type="email">
+
+            <h3>Engagement</h3>
+
+            <label>Je souhaite :</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Adhérer à l’association</label>
+                <label><input type="checkbox"> Être bénévole ponctuel</label>
+                <label><input type="checkbox"> Être membre actif</label>
+            </div>
+
+            <label>Mes disponibilités :</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> En semaine</label>
+                <label><input type="checkbox"> Le week-end</label>
+                <label><input type="checkbox"> En journée</label>
+                <label><input type="checkbox"> En soirée</label>
+            </div>
+
+            <h3>Compétences & cotisation</h3>
+
+            <label>Centres d’intérêt / Compétences</label>
+            <textarea placeholder="Ex : animation, cuisine, musique, jardinage, communication..."></textarea>
+
+            <label>Montant de la cotisation (€)</label>
+            <input type="number" min="0">
+
+            <label>Mode de règlement :</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> En espèces</label>
+                <label><input type="checkbox"> Par chèque</label>
+                <div class="note">(à l’ordre de : Association Culturelle et Sociale)</div>
+            </div>
+
+            <button type="submit">Envoyer l’inscription</button>
+
+        </form>
+
+        <div class="payment">
+            <h2>Paiement en ligne</h2>
+            <p>Paiement sécurisé par carte bancaire</p>
+
+            <a href="https://www.helloasso.com/associations/TON-ASSOCIATION/formulaires/1" target="_blank">
+                <button>Payer la cotisation</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
